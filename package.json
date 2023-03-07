@@ -1,0 +1,52 @@
+{
+  "name": "@vitejs/ssr-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
+    "generate": "vite build --outDir dist/static && npm run build:server && node prerender",
+    "serve": "NODE_ENV=production node server",
+    "debug": "node --inspect-brk server"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
+    "@types/babel__core": "^7.20.0",
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^18.14.2",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vitejs/release-scripts": "^1.1.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "eslint": "^8.35.0",
+    "eslint-define-config": "^1.15.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-regexp": "^1.12.0",
+    "execa": "^7.0.0",
+    "fs-extra": "^11.1.0",
+    "lint-staged": "^13.1.2",
+    "npm-run-all": "^4.1.5",
+    "picocolors": "^1.0.0",
+    "playwright-chromium": "^1.31.1",
+    "prettier": "2.8.4",
+    "rollup": "^3.17.3",
+    "simple-git-hooks": "^2.8.1",
+    "tsx": "^3.12.3",
+    "typescript": "^4.9.5",
+    "unbuild": "^1.1.2",
+    "vite": "^4.1.4",
+    "vitest": "^0.29.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "3.1.0",
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "serve-static": "^1.15.0"
+  }
+}
