@@ -1,5 +1,39 @@
 # REACT VITE SSG TEMPLATE
 
-Pre-render the app into static HTML.
+This is a template for Vite SSG/pre-rendering in React.
 
-run `yarn generate` and then `dist/static` can be served as a static site.
+You can pre-render the app into static HTML by running `pnpm run generate` and the generated files are organized in the following directory structure:
+
+```
+`/dist`
+  `/server`
+    - entry-server.js
+  `/static`
+    *.html
+    `/assets`
+      - *.css
+      - *.js
+      - *.{jpg,png}
+```
+
+Then you can serve the contents of the `dist/static` folder as a static site.
+
+## Development
+
+```
+# To start development
+pnpm run dev
+
+# To pre-render
+pnpm run generate
+```
+
+## Tech Stack
+
+- React
+- Vite
+- Tailwind
+
+## Note
+
+Please note that you use this template at your own risk.
