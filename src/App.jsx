@@ -20,7 +20,7 @@ export function App() {
         <ul>
           {routes.map(({ name, path }) => {
             return (
-              <li key={path}>
+              <li key={path} className='text-blue-500'>
                 <Link to={path}>{name}</Link>
               </li>
             )
