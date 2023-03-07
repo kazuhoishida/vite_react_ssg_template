@@ -5,15 +5,18 @@ This is a template for Vite SSG/pre-rendering in React.
 You can pre-render the app into static HTML by running `pnpm run generate` and the generated files are organized in the following directory structure:
 
 ```
-`/dist`
-  `/server`
+/dist
+  /server
     - entry-server.js
-  `/static`
+  /static
     *.html
-    `/assets`
-      - *.css
-      - *.js
-      - *.{jpg,png}
+    /assets
+      /css
+        - *.css
+      /js
+        - *.js
+      /images
+        - *.{jpg,png}
 ```
 
 Then you can serve the contents of the `dist/static` folder as a static site.
