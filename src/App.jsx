@@ -1,4 +1,5 @@
 import { Link, Route, Routes } from 'react-router-dom'
+import './styles/index.css'
 
 // Auto generates routes from files under ./pages
 // https://vitejs.dev/guide/features.html#glob-import
